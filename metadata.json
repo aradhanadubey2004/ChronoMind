@@ -1,0 +1,6 @@
+{
+  "name": "ChronoMind AI",
+  "description": "Premium dark mode AI productivity platform featuring long-term conversation memory, decision timeline simulator, temporal AI chat, and cognitive task management.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
