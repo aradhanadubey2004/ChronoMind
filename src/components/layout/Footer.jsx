@@ -1,5 +1,5 @@
 import React from 'react';
-import { Brain, Shield, Github, Twitter, Linkedin, Heart } from 'lucide-react';
+import { Brain, Shield, Github, Twitter, Linkedin } from 'lucide-react';
 
 export const Footer = ({ onNavigate }) => {
   return (
@@ -62,9 +62,6 @@ export const Footer = ({ onNavigate }) => {
 
       <div className="max-w-7xl mx-auto mt-6 pt-4 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-400 font-medium gap-2">
         <p>© 2026 ChronoMind AI Inc. All rights reserved.</p>
-        <p className="flex items-center gap-1">
-          Built with <Heart className="w-3 h-3 text-red-500 fill-red-500" /> for AI Studio
-        </p>
       </div>
     </footer>
   );
