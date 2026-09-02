@@ -1,3 +1,8 @@
+const API_BASE_URL =
+  import.meta.env.VITE_API_URL ||
+  'https://chronomind-backend-p8ac.onrender.com';
+
+const apiUrl = (path) => `${API_BASE_URL}${path}`;
 /**
  * Frontend AI Service
  * Handles API calls to ChronoMind AI endpoints:
@@ -27,16 +32,15 @@ export const ensureAuthToken = async () => {
     const email = 'alex.vance@quantumtech.io';
     const password = 'password123';
 
-    let res = await fetch('/api/v1/auth/login', {
+    let res = await fetch(apiUrl('/api/v1/auth/login'), {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, password }),
     });
 
     let data = await res.json();
-
     if (!res.ok || !data.token) {
-      res = await fetch('/api/v1/auth/register', {
+   res = await fetch(apiUrl('/api/v1/auth/register'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -104,7 +108,7 @@ const fetchWithAuth = async (url, options = {}) => {
     ...customHeaders,
   };
 
-  let response = await fetch(url, { ...options, headers });
+let response = await fetch(apiUrl(url), { ...options, headers });
 
   if (response.status === 401) {
     // Clear stale or invalid token and re-authenticate with backend
@@ -120,7 +124,7 @@ const fetchWithAuth = async (url, options = {}) => {
       ...customHeaders,
     };
 
-    response = await fetch(url, { ...options, headers: retryHeaders });
+   response = await fetch(apiUrl(url), { ...options, headers: retryHeaders });
   }
 
   return response;
