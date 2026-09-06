@@ -381,7 +381,7 @@ INSTRUCTIONS:
 - Be accurate, clear, and professional. Do NOT invent information not present in the document.`;
 
     const response = await ai.models.generateContent({
-      model: 'gemini-2.5-flash',
+      model: 'gemini-3.6-flash',
       contents: cleanQuery,
       config: {
         systemInstruction,
