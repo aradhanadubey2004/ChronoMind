@@ -91,7 +91,7 @@ const processAndEmbedDocument = async (textContent) => {
     const ai = getAiClient();
     if (ai) {
       const resp = await ai.models.generateContent({
-        model: 'gemini-2.5-flash',
+        model: 'gemini-3.6-flash',
         contents: `Provide a concise 2-sentence executive summary of the following document content:\n\n${cleanText.slice(0, 3000)}`,
         config: {
           temperature: 0.2,
