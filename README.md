@@ -75,7 +75,7 @@ GEMINI_API_KEY=your_google_gemini_api_key
 - `POST /decisions` - Extract key decision points (`Protected`)
 - `POST /tasks` - Synthesize actionable tasks (`Protected`)
 
-### Memory & Workspace Routes
+### Memory & Workspace Routes 
 - `GET/POST /api/v1/conversations` - Memory management (`Protected`)
 - `GET/POST /api/v1/decisions` - Decision timeline (`Protected`)
 - `GET/POST /api/v1/tasks` - Task management (`Protected`)
